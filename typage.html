@@ -167,10 +167,9 @@
             color: var(--text-muted);
         }
 
-        /* Offers Grid */
+        /* Offers Layout Elements */
         .offers-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
             gap: 32px;
         }
 
@@ -185,7 +184,7 @@
         }
 
         .offer-badge {
-            align-self: flex-start;
+            display: inline-block;
             background-color: #e9f0ee;
             color: var(--primary);
             padding: 4px 10px;
@@ -208,7 +207,6 @@
             font-size: 15px;
             color: var(--text-muted);
             margin-bottom: 24px;
-            flex-grow: 1;
         }
 
         .btn-secondary {
@@ -240,10 +238,6 @@
 
         /* Responsive Layouts */
         @media (max-width: 768px) {
-            .offers-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
             h1 { font-size: 32px; }
         }
     </style>
@@ -270,38 +264,28 @@
             <h2>Step 1: Pick a Time for Your Free 15-Min Consultation</h2>
             <p>Select a convenient date and time to lock in your live consultation call with Haroun. Let's briefly discuss your background and goals.</p>
             
-            <!-- Google Form Connected Successfully Below -->
+            <!-- Google Form Link Connected -->
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo6zzytAczx7c0iuPaP7DwJCmMj0JnQtfRFf-UqRo17oj8YQ/viewform?usp=publish-editor" class="btn-calendar" target="_blank" rel="noopener noreferrer">Choose Date &amp; Time Slot →</a>
         </section>
     </main>
 
-    <!-- Additional Offer Elements Section -->
+    <!-- Modified Single-Offer Strategic SLO Transition Section -->
     <section class="offers-section">
         <div class="container">
             <div class="section-header">
                 <h2>Explore More Ways to Grow</h2>
-                <p>While preparing for your intake call, discover our direct professional programs and self-paced learning tracks designed explicitly for expats.</p>
+                <p>While preparing for your intake call, fast-track your progress with our specialized self-paced implementation system designed explicitly for expats.</p>
             </div>
             
-            <div class="offers-grid">
-                <!-- Offer 1: Premium Clinical Therapy -->
-                <div class="offer-card">
+            <div class="offers-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
+                <!-- Single Focused Offer: Low-Ticket / SLO Blueprint -->
+                <div class="offer-card" style="text-align: center; align-items: center;">
                     <div>
-                        <span class="offer-badge">1-on-1 Clinical Care</span>
-                        <h3>Comprehensive Online Therapy</h3>
-                        <p>Deep-dive clinical sessions tailored to individual healing or Gottman-certified couples support. Perfect for resolving deep-rooted barriers, treating anxiety, or stabilizing relationship communication channels.</p>
+                        <span class="offer-badge" style="align-self: center;">Exclusive Digital Training Toolkit</span>
+                        <h3>The Expat Emotional Resilience Blueprint</h3>
+                        <p>Get immediate, life-changing tools to neutralize integration burnout, conquer isolation anxiety, and maximize your lifestyle clarity abroad. Perfect to work through independently while waiting for your clinical session.</p>
                     </div>
-                    <a href="#" class="btn-secondary">View Therapy Options</a>
-                </div>
-
-                <!-- Offer 2: Educational Courses -->
-                <div class="offer-card">
-                    <div>
-                        <span class="offer-badge">Self-Paced Training</span>
-                        <h3>Expat Resilience Digital Courses</h3>
-                        <p>Structured video tracks and downloadable behavioral framework workbooks. Learn proven psychological mechanisms to navigate cultural shifts, career stress, and isolated lifestyles independently.</p>
-                    </div>
-                    <a href="#" class="btn-secondary">Browse Courses</a>
+                    <a href="https://dyegoleop-fourtwenty.github.io/funneltest/slo" class="btn-secondary" style="width: 100%; max-width: 280px; margin-top: 12px;">Get The Blueprint Now</a>
                 </div>
             </div>
         </div>
