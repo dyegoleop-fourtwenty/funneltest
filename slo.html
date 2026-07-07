@@ -248,7 +248,6 @@
             line-height: 1.4;
         }
 
-        /* Responsive Configuration Layout */
         @media (max-width: 850px) {
             .slo-grid {
                 grid-template-columns: 1fr;
@@ -261,7 +260,6 @@
 </head>
 <body>
 
-    <!-- Urgency/Scarcity Notification Hook -->
     <div class="notice-bar">
         ⚠️ Special Client Upgrade Offer: This page will only be shown <span>once</span>.
     </div>
@@ -273,7 +271,6 @@
     </header>
 
     <main class="container slo-grid">
-        <!-- Explanatory Pitch Component Layer -->
         <article class="pitch-content">
             <p>Moving across the world changes everything—your routines, your support structures, and your internal baseline. It is entirely natural to feel overwhelmed or disconnected while trying to project an aura of effortless career success.</p>
             
@@ -286,7 +283,6 @@
                 <li><strong>Gottman Methodology Primer:</strong> Key foundational micro-lessons for preserving long-distance or high-stress international relational health.</li>
             </ul>
 
-            <!-- Complete Value Stack Assembly Grid -->
             <div class="value-stack">
                 <div class="value-stack-title">What You're Securing Right Now:</div>
                 <div class="stack-item"><span>The Complete Resilience Video System</span> <span class="item-value">€97 Value</span></div>
@@ -296,7 +292,6 @@
             </div>
         </article>
 
-        <!-- Transaction Processing Side Container -->
         <aside class="checkout-box">
             <div class="price-display">
                 <div class="strike-price">Regularly €181.00</div>
@@ -304,7 +299,6 @@
                 <p style="font-size: 13px; color: var(--text-muted); margin-top: 8px;">One-time investment. Immediate instant digital access.</p>
             </div>
 
-            <!-- Strategic Order Bump Component to Maximize AOV -->
             <div class="order-bump">
                 <input type="checkbox" id="bump-checkbox">
                 <div class="order-bump-text">
@@ -315,10 +309,9 @@
                 </div>
             </div>
 
-            <!-- Shopify Connected Purchase Button (Will feed checkout and handoff to the Upsell Page) -->
+            <!-- This link handles item loading and sends them to your checkout environment -->
             <a href="#" id="checkout-btn" class="btn-order">Secure My Blueprint Now →</a>
 
-            <!-- Complete Risk-Reversal Guarantee Elements -->
             <div class="guarantee-box">
                 <div class="guarantee-badge">🛡️</div>
                 <div class="guarantee-text">
@@ -329,28 +322,22 @@
     </main>
 
     <script>
-        // Shopify Permalink URL Builder Script
-        // Ensure you change these placeholders to match your real live store variants!
+        // Shopify Permalink URL Configuration Logic
         const shopifyStoreDomain = "bravekey-therapy.myshopify.com"; 
-        const mainProductVariantId = "12345678901234"; // Variant ID for the €27 Blueprint
-        const orderBumpVariantId = "98765432109876";   // Variant ID for the €9.95 Audio Upgrade
+        const mainProductVariantId = "12345678901234"; 
+        const orderBumpVariantId = "98765432109876";   
 
         const checkoutBtn = document.getElementById('checkout-btn');
         const bumpCheckbox = document.getElementById('bump-checkbox');
 
         function updateCheckoutUrl() {
-            // Shopify permanent cart link construction format
             let url = `https://${shopifyStoreDomain}/cart/${mainProductVariantId}:1`;
-            
-            // If the upsell checkbox is verified active, combine the arrays seamlessly
             if (bumpCheckbox.checked) {
                 url = `https://${shopifyStoreDomain}/cart/${mainProductVariantId}:1,${orderBumpVariantId}:1`;
             }
-            
             checkoutBtn.href = url;
         }
 
-        // Add change state listeners to the configuration
         bumpCheckbox.addEventListener('change', updateCheckoutUrl);
         updateCheckoutUrl();
     </script>
