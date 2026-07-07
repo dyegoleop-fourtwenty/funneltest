@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Upgrade Offer | BraveKey Therapy</title>
+    <style>
+        /* Core Funnel Design Tokens */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2d4a43;       /* Deep Forest Green */
+            --primary-light: #446e64;
+            --accent: #d4a373;        /* Ochre Accent */
+            --accent-hover: #c39262;
+            --text-main: #2b2d42;
+            --text-muted: #6c757d;
+            --bg-light: #fdfbf7;      /* Warm Canvas Background */
+            --bg-white: #ffffff;
+            --border-color: #f0ede6;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Top Progress Indicator Bar */
+        .progress-bar {
+            background-color: #e9f0ee;
+            color: var(--primary);
+            text-align: center;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .progress-bar span {
+            color: #b33939;
+        }
+
+        /* Upsell Header Messaging Area */
+        .upsell-header {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+
+        .badge-alert {
+            display: inline-block;
+            background-color: #ffe6e6;
+            color: #b33939;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 1.25;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .sub-headline {
+            font-size: 19px;
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* Main Core Pitch Content */
+        .main-card {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(45, 74, 67, 0.04);
+            margin-bottom: 40px;
+        }
+
+        .main-card h2 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 24px 0 12px;
+        }
+
+        .main-card p {
+            margin-bottom: 16px;
+            color: #4a4c5e;
+            font-size: 16px;
+        }
+
+        /* Value Highlight Block */
+        .value-callout {
+            background-color: #faf7f2;
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 28px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .value-callout ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .value-callout li {
+            margin-bottom: 10px;
+            font-size: 15px;
+            display: flex;
+            gap: 10px;
+        }
+        .value-callout li:last-child { margin-bottom: 0; }
+
+        /* Pricing Action Container Setup */
+        .action-container {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .price-compare {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+        .price-compare span {
+            text-decoration: line-through;
+        }
+
+        .upsell-price {
+            font-size: 44px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 24px;
+        }
+
+        /* Large Action Button Styles */
+        .btn-upgrade {
+            display: inline-block;
+            width: 100%;
+            max-width: 500px;
+            background-color: var(--accent);
+            color: var(--bg-white);
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 18px 32px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 4px 12px rgba(212, 163, 115, 0.3);
+        }
+
+        .btn-upgrade:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Low Friction Cancellation Trigger Link */
+        .skip-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--text-muted);
+            font-size: 14px;
+            text-decoration: underline;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .skip-link:hover {
+            color: #b33939;
+        }
+
+        /* Responsive Optimization Rules */
+        @media (max-width: 600px) {
+            .main-card { padding: 24px; }
+            h1 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Funnel State Notification Header Bar -->
+    <div class="progress-bar">
+        ⚠️ <span>Don't close this window:</span> Your Blueprint purchase is confirmed, but your order is not quite complete...
+    </div>
+
+    <header class="container upsell-header">
+        <span class="badge-alert">One-Time Client Upgrade</span>
+        <h1>Accelerate Your Transition: Join The Live Expat Synergy Cohort</h1>
+        <p class="sub-headline">Add interactive group implementation mapping, direct peer feedback, and two live case review sessions with Haroun at a 67% discount.</p>
+    </header>
+
+    <main class="container">
+        <div class="main-card">
+            <p>Thank you for purchasing the Expat Emotional Resilience Blueprint! That framework will give you an incredible foundation to start auditing your stress markers independently.</p>
+            
+            <h2>Why This Upgrade Exists:</h2>
+            <p>While self-paced blueprints provide structure, real transformation accelerates when your unique obstacles are explicitly reviewed. The <strong>Expat Synergy Cohort</strong> is a compact, highly confidential interactive small-group accelerator program designed to translate theories directly into execution.</p>
+
+            <div class="value-callout">
+                <ul>
+                    <li>✨ <strong>2 Live Group Mastery Audits:</strong> Direct strategy execution adjustments live on private calls with Haroun.</li>
+                    <li>✨ <strong>The Peer Integration Network:</strong> Direct, private communication channels with high-performance international professionals navigating identical relocations.</li>
+                    <li>✨ <strong>Lifetime Framework Replay Vault:</strong> Complete access to archive materials, case break-downs, and communication matrices.</li>
+                </ul>
+            </div>
+
+            <h2>Exclusive Funnel Pricing Structure:</h2>
+            <p>This group dynamic normally commands a €297 tuition fee when accessed from our public service channels. Because you just committed to our foundational track, you can add this implementation network to your profile right now for a heavily discounted fraction of that cost.</p>
+
+            <!-- Checkout Action Module Context -->
+            <div class="action-container">
+                <div class="price-compare">Public Tuition Fee: <span>€297</span></div>
+                <div class="upsell-price">Only €97</div>
+
+                <!-- Connect this form/action to your instant order processor API -->
+                <form action="#" method="POST">
+                    <button type="submit" class="btn-upgrade">Yes! Add The Synergy Upgrade To My Order →</button>
+                </form>
+
+                <!-- This forwards them safely out of the loops to fulfillment/thank you pages -->
+                <a href="https://dyegoleop-fourtwenty.github.io/funneltest/typage" class="skip-link">No thanks, I prefer to work through the self-paced materials completely alone.</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
