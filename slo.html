@@ -296,7 +296,7 @@
             </div>
         </article>
 
-        <!-- Transaction & Order Bump Processing Component -->
+        <!-- Transaction Processing Side Container -->
         <aside class="checkout-box">
             <div class="price-display">
                 <div class="strike-price">Regularly €181.00</div>
@@ -310,13 +310,13 @@
                 <div class="order-bump-text">
                     <label style="cursor: pointer;" for="bump-checkbox">
                         <span class="order-bump-badge">Add for €9.95</span> 
-                        <strong>Yes, Add The Private Audio Private Feed Upgrade!</strong> Get full portable, high-fidelity MP3 formats of all system lessons to listen on your daily commute or walk.
+                        <strong>Yes, Add The Private Audio Feed Upgrade!</strong> Get full portable, high-fidelity MP3 formats of all system lessons to listen on your daily commute or walk.
                     </label>
                 </div>
             </div>
 
-            <!-- Shopify Connected Purchase Button -->
-            <a href="#" id="checkout-btn" class="btn-order" target="_blank">Secure My Blueprint Now →</a>
+            <!-- Shopify Connected Purchase Button (Will feed checkout and handoff to the Upsell Page) -->
+            <a href="#" id="checkout-btn" class="btn-order">Secure My Blueprint Now →</a>
 
             <!-- Complete Risk-Reversal Guarantee Elements -->
             <div class="guarantee-box">
@@ -329,27 +329,28 @@
     </main>
 
     <script>
-        // Shopify Permalink Configurator
-        // Replace with your real Shopify store domain and variant IDs!
-        const shopifyStoreDomain = "sample-bravekey-therapy.myshopify.com"; 
-        const mainProductVariantId = "12345678901234"; // ID for the €27 Blueprint
-        const orderBumpVariantId = "98765432109876";   // ID for the €9.95 Audio Upgrade
+        // Shopify Permalink URL Builder Script
+        // Ensure you change these placeholders to match your real live store variants!
+        const shopifyStoreDomain = "bravekey-therapy.myshopify.com"; 
+        const mainProductVariantId = "12345678901234"; // Variant ID for the €27 Blueprint
+        const orderBumpVariantId = "98765432109876";   // Variant ID for the €9.95 Audio Upgrade
 
         const checkoutBtn = document.getElementById('checkout-btn');
         const bumpCheckbox = document.getElementById('bump-checkbox');
 
         function updateCheckoutUrl() {
-            let url = `https://${shopifyStoreDomain}/cart/v2/variants/${mainProductVariantId}:1`;
+            // Shopify permanent cart link construction format
+            let url = `https://${shopifyStoreDomain}/cart/${mainProductVariantId}:1`;
             
-            // If the user checks the order bump box, add it dynamically to the Shopify cart parameters
+            // If the upsell checkbox is verified active, combine the arrays seamlessly
             if (bumpCheckbox.checked) {
-                url += `,${orderBumpVariantId}:1`;
+                url = `https://${shopifyStoreDomain}/cart/${mainProductVariantId}:1,${orderBumpVariantId}:1`;
             }
             
             checkoutBtn.href = url;
         }
 
-        // Initialize and listen for switches
+        // Add change state listeners to the configuration
         bumpCheckbox.addEventListener('change', updateCheckoutUrl);
         updateCheckoutUrl();
     </script>
