@@ -3,266 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>High-Converting Funnel Page</title>
+    <title>Online Therapy & Couples Coaching for Expats | BraveKey Therapy</title>
+    <meta name="description" content="Personalized online individual therapy and couples coaching for expats across the Netherlands. Find your peace of mind with Haroun at BraveKey Therapy. Book a free 15-minute consultation.">
     <style>
-        /* Reset & Base Styles */
+        /* Modern Reset & Design Tokens */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #2d4a43;       /* Deep Forest/Slate Green (Trust & Calm) */
+            --primary-light: #446e64;
+            --accent: #d4a373;        /* Warm Gold/Ochre (Insight & Action) */
+            --accent-hover: #c39262;
+            --text-main: #2b2d42;     /* Readable Off-black */
+            --text-muted: #6c757d;    /* Soft Gray */
+            --bg-light: #fdfbf7;      /* Warm Off-white canvas */
+            --bg-white: #ffffff;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            color: #1e293b;
-            background-color: #f8fafc;
-            line-height: 1.5;
+            font-family: var(--font-stack);
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1140px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* Header / Navigation */
+        /* Header Navigation */
         .header {
-            padding: 20px 0;
+            padding: 24px 0;
+            background-color: transparent;
         }
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            color: #0f172a;
-        }
-        .logo span {
-            color: #2563eb; /* High contrast primary theme color */
-        }
-
-        /* Hero Section (Above the Fold) */
-        .hero {
-            padding: 60px 0 80px;
-        }
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
+        
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
         }
 
-        .badge {
-            background-color: #dbeafe;
-            color: #1e40af;
-            padding: 6px 12px;
-            border-radius: 20px;
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--accent);
+            font-weight: 400;
+        }
+
+        /* Hero / Value Proposition Section */
+        .hero {
+            padding: 60px 0 100px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: #e9f0ee;
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 30px;
             font-size: 14px;
             font-weight: 600;
-            display: inline-block;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
         }
 
         h1 {
-            font-size: 44px;
+            font-size: 46px;
             line-height: 1.2;
             font-weight: 800;
-            color: #0f172a;
+            color: var(--primary);
             margin-bottom: 20px;
+            letter-spacing: -1px;
         }
 
-        .lead-text {
+        .hero-lead {
+            font-size: 19px;
+            color: var(--text-muted);
+            margin-bottom: 36px;
+        }
+
+        /* Conversion Architecture (Form) */
+        .cta-box {
+            background-color: var(--bg-white);
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(45, 74, 67, 0.06);
+            border: 1px solid #f0ede6;
+        }
+
+        .cta-box-title {
             font-size: 18px;
-            color: #475569;
-            margin-bottom: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--primary);
         }
 
-        /* High-Conversion Form */
-        .conversion-form {
+        .funnel-form {
             display: flex;
-            gap: 12px;
-            margin-bottom: 12px;
+            flex-direction: column;
+            gap: 16px;
         }
 
-        .conversion-form input[type="email"] {
-            flex: 1;
-            padding: 16px;
-            font-size: 16px;
-            border: 2px solid #cbd5e1;
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .funnel-form input, .funnel-form select {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 15px;
+            border: 1px solid #dcd9d2;
             border-radius: 8px;
+            background-color: #faf9f5;
             outline: none;
-            transition: border-color 0.2s;
+            font-family: inherit;
+            transition: all 0.2s ease;
         }
 
-        .conversion-form input[type="email"]:focus {
-            border-color: #2563eb;
+        .funnel-form input:focus, .funnel-form select:focus {
+            border-color: var(--primary);
+            background-color: var(--bg-white);
+            box-shadow: 0 0 0 3px rgba(45, 74, 67, 0.1);
         }
 
-        .btn-cta {
-            background-color: #2563eb;
-            color: white;
+        .btn-submit {
+            background-color: var(--accent);
+            color: var(--bg-white);
             font-size: 16px;
             font-weight: 700;
-            padding: 16px 28px;
+            padding: 16px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.2s, transform 0.1s;
-            white-space: nowrap;
         }
 
-        .btn-cta:hover {
-            background-color: #1d4ed8;
-            transform: translateY(-1px);
+        .btn-submit:hover {
+            background-color: var(--accent-hover);
         }
 
-        .form-subtext {
+        .form-privacy {
             font-size: 13px;
-            color: #64748b;
-        }
-
-        /* Hero Image Visual Placeholder */
-        .image-mockup {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-            height: 350px;
-            border-radius: 16px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .stats-bar {
-            background: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 700;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Social Proof Section */
-        .social-proof {
-            background-color: #ffffff;
-            border-top: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
-            padding: 40px 0;
+            color: var(--text-muted);
             text-align: center;
+            margin-top: 12px;
         }
 
-        .proof-title {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #64748b;
-            margin-bottom: 24px;
-            font-weight: 600;
+        /* Services Grid (SEO optimized content blocks) */
+        .services-section {
+            background-color: var(--bg-white);
+            padding: 100px 0;
+            border-top: 1px solid #f0ede6;
         }
 
-        .logos-grid {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            opacity: 0.6;
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .service-card {
+            padding: 40px 32px;
+            background: var(--bg-light);
+            border-radius: 12px;
+            border: 1px solid #f0ede6;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 14px;
             font-weight: 700;
-            color: #475569;
         }
 
-        /* Testimonial Section */
-        .testimonial-section {
+        .service-card p {
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        /* Social Proof / Trust Signals */
+        .trust-section {
             padding: 80px 0;
-            background-color: #f8fafc;
-        }
-
-        .testimonial-card {
-            max-width: 700px;
-            margin: 0 auto;
             text-align: center;
+            background-color: #f4f1ea;
         }
 
-        blockquote {
+        .testimonial-container {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .testimonial-text {
             font-size: 22px;
             font-style: italic;
-            color: #0f172a;
-            margin-bottom: 20px;
-            position: relative;
+            color: var(--primary);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            font-weight: 500;
         }
 
-        .author strong {
+        .testimonial-author {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .testimonial-author span {
             display: block;
-            color: #1e293b;
+            font-weight: 400;
+            color: var(--text-muted);
+            text-transform: none;
+            margin-top: 4px;
         }
 
-        .author span {
-            font-size: 14px;
-            color: #64748b;
+        /* Footer Authority Text */
+        .footer-seo {
+            padding: 40px 0;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: center;
+            border-top: 1px solid #e9e5dc;
         }
 
-        /* Responsive Layout Breakpoint */
-        @media (max-width: 768px) {
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
             .hero-grid {
                 grid-template-columns: 1fr;
-                text-align: center;
+                gap: 40px;
             }
-            .conversion-form {
-                flex-direction: column;
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
             }
+        }
+
+        @media (max-width: 576px) {
+            h1 { font-size: 34px; }
+            .form-row { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Header Area -->
     <header class="header">
-        <div class="container">
-            <div class="logo">Brand<span>Name</span></div>
+        <div class="container header-wrap">
+            <div class="logo">BraveKey<span>Therapy</span></div>
         </div>
     </header>
 
-    <section class="hero">
+    <!-- Main Funnel Hero Section -->
+    <main class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <span class="badge">Limited Time Offer</span>
-                <h1>Double Your Conversion Rate Without Increasing Ad Spend</h1>
-                <p class="lead-text">Stop wasting money on traffic that bounces. Our proven framework plugs the leaks in your sales funnel so you can scale predictably.</p>
-                
-                <form class="conversion-form" action="#" method="POST">
-                    <input type="email" placeholder="Enter your best email..." required>
-                    <button type="submit" class="btn-cta">Get Free Audit Now →</button>
-                </form>
-                <p class="form-subtext">🔒 No spam. Unsubscribe with 1-click anytime.</p>
+                <span class="hero-badge">Convenient Online Sessions Across The Netherlands</span>
+                <h1>Feeling Stuck as an Expat? Let's Find Your Peace of Mind.</h1>
+                <p class="hero-lead">Life abroad brings unique challenges. Whether you are navigating individual hurdles or looking to recalibrate your relationship, BraveKey offers dedicated online mental health therapy tailored precisely to the international community.</p>
             </div>
-            <div class="hero-image">
-                <div class="image-mockup">
-                    <div class="stats-bar">🚀 +142% ROI</div>
+            
+            <!-- Lead Generation Mechanism (Low Friction Conversion) -->
+            <div class="hero-sidebar" id="book-consultation">
+                <div class="cta-box">
+                    <h2 class="cta-box-title">Schedule a Free 15-Min Phone Consultation</h2>
+                    <form class="funnel-form" action="#" method="POST">
+                        <div class="form-row">
+                            <input type="text" name="first_name" placeholder="First Name" required aria-label="First Name">
+                            <input type="text" name="last_name" placeholder="Last Name" required aria-label="Last Name">
+                        </div>
+                        <input type="email" name="email" placeholder="Email Address" required aria-label="Email Address">
+                        <input type="tel" name="phone" placeholder="Phone Number" required aria-label="Phone Number">
+                        <select name="service_interest" required aria-label="Select Service of Interest">
+                            <option value="" disabled selected>Service of Interest...</option>
+                            <option value="individual">Individual Therapy</option>
+                            <option value="couples">Couples Therapy & Coaching</option>
+                            <option value="group">Group Therapy</option>
+                        </select>
+                        <button type="submit" class="btn-submit">Claim Free Call Now →</button>
+                    </form>
+                    <p class="form-privacy">🔒 Confidentiality assured. No commitment required.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Core Focused Offerings (SEO Target Sub-keywords) -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Evidence-Based Online Care</h2>
+                <p>Personal and accessible therapeutic structures designed to help you break through barriers directly from your own space.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Individual Therapy</h3>
+                    <p>Address anxiety, depression, burnout, or identity shifts safely. Together we can map out practical coping mechanisms to help you rediscover balance while working and living abroad.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Couples Counseling</h3>
+                    <p>Utilizing globally recognized Gottman Methodology and Emotionally Focused Therapy (EFT) structures to guide communication and re-relate constructively with your partner.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Expat Coaching</h3>
+                    <p>Available worldwide. Actionable personal lifestyle adjustments optimized for remote professionals, digital nomads, and expats looking for explicit trajectory alignment.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="social-proof">
-        <div class="container">
-            <p class="proof-title">Trusted by growth teams at world-class companies</p>
-            <div class="logos-grid">
-                <div class="logo-item">Acme Corp</div>
-                <div class="logo-item">Stark Industries</div>
-                <div class="logo-item">Wayne Ent.</div>
-                <div class="logo-item">Cyberdyne</div>
+    <!-- Social Proof & Validation -->
+    <section class="trust-section">
+        <div class="container testimonial-container">
+            <p class="testimonial-text">"Being an expat in Amsterdam presented mental health stressors I didn't foresee. The flexibility of online counseling combined with specialized care completely transformed how I process transition phases."</p>
+            <div class="testimonial-author">
+                Expats Across the Netherlands
+                <span>Serving Amsterdam, Rotterdam, The Hague, Utrecht, Eindhoven & Beyond</span>
             </div>
         </div>
     </section>
 
-    <section class="testimonial-section">
+    <!-- Footer Disclaimers & Core Target Locations -->
+    <footer class="footer-seo">
         <div class="container">
-            <div class="testimonial-card">
-                <blockquote>
-                    "Implementing this exact funnel structure took our landing page conversion rate from 2.1% to 6.8% in less than 30 days. The ROI was immediate."
-                </blockquote>
-                <div class="author">
-                    <strong>Sarah Jenkins</strong>
-                    <span>VP of Growth, TechScale</span>
-                </div>
-            </div>
+            <p>© BraveKey Therapy & Coaching. Registered and serving clients throughout the region of The Netherlands.</p>
         </div>
-    </section>
+    </footer>
 
 </body>
 </html>
