@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offer: Expat Emotional Resilience Blueprint</title>
+    <style>
+        /* Core Brand Foundations */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2d4a43;       /* Brand Deep Forest Green */
+            --primary-light: #446e64;
+            --accent: #d4a373;        /* Brand Ochre/Gold Highlight */
+            --accent-hover: #c39262;
+            --text-main: #2b2d42;
+            --text-muted: #6c757d;
+            --bg-light: #fdfbf7;      /* Brand Warm Canvas Background */
+            --bg-white: #ffffff;
+            --border-color: #f0ede6;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Top Notification Urgency Bar */
+        .notice-bar {
+            background-color: var(--primary);
+            color: var(--bg-light);
+            text-align: center;
+            padding: 10px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .notice-bar span {
+            color: var(--accent);
+        }
+
+        /* Main Structural Framing */
+        .slo-header {
+            text-align: center;
+            padding: 48px 0 32px;
+        }
+
+        .label-badge {
+            display: inline-block;
+            background-color: #e9f0ee;
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 38px;
+            line-height: 1.25;
+            font-weight: 800;
+            color: var(--primary);
+            max-width: 850px;
+            margin: 0 auto 20px;
+            letter-spacing: -1px;
+        }
+
+        .sub-headline {
+            font-size: 19px;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Two-Column Purchase Grid Layout */
+        .slo-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+            padding: 40px 0 80px;
+            align-items: start;
+        }
+
+        /* Pitch & Stack Content Column */
+        .pitch-content h2 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 28px 0 14px;
+        }
+
+        .pitch-content p {
+            margin-bottom: 16px;
+            color: #4a4c5e;
+        }
+
+        .value-stack {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 32px;
+        }
+
+        .value-stack-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .stack-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .stack-item:last-child { border: none; }
+        .stack-item .item-value { font-weight: 600; color: var(--primary-light); }
+
+        /* Checkout / Conversion Column */
+        .checkout-box {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 20px 40px rgba(45, 74, 67, 0.05);
+            position: sticky;
+            top: 24px;
+        }
+
+        .price-display {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .strike-price {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        .actual-price {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            margin-top: 4px;
+        }
+
+        /* Frictionless Impulse Order Bump Element */
+        .order-bump {
+            background-color: #fcf9f2;
+            border: 2px dashed var(--accent);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .order-bump input[type="checkbox"] {
+            margin-top: 5px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        .order-bump-text {
+            font-size: 13.5px;
+            line-height: 1.4;
+        }
+        .order-bump-badge {
+            background-color: var(--accent);
+            color: white;
+            padding: 2px 6px;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        /* High-Conversion CTA Trigger Button */
+        .btn-order {
+            display: block;
+            width: 100%;
+            background-color: var(--accent);
+            color: var(--bg-white);
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            box-shadow: 0 4px 12px rgba(212, 163, 115, 0.3);
+        }
+
+        .btn-order:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Guarantee Trust Signal */
+        .guarantee-box {
+            display: flex;
+            gap: 16px;
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            align-items: center;
+        }
+
+        .guarantee-badge {
+            font-size: 28px;
+            background: #e9f0ee;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .guarantee-text {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Responsive Configuration Layout */
+        @media (max-width: 850px) {
+            .slo-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            h1 { font-size: 30px; }
+            .checkout-box { position: static; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Urgency/Scarcity Notification Hook -->
+    <div class="notice-bar">
+        ⚠️ Special Client Upgrade Offer: This page will only be shown <span>once</span>.
+    </div>
+
+    <header class="container slo-header">
+        <span class="label-badge">Exclusive Digital Training Toolkit</span>
+        <h1>The Expat Emotional Resilience Blueprint</h1>
+        <p class="sub-headline">The structured psychological toolkit designed to neutralize integration burnout, conquer isolation anxiety, and maximize your lifestyle clarity abroad.</p>
+    </header>
+
+    <main class="container slo-grid">
+        <!-- Explanatory Pitch Component Layer -->
+        <article class="pitch-content">
+            <p>Moving across the world changes everything—your routines, your support structures, and your internal baseline. It is entirely natural to feel overwhelmed or disconnected while trying to project an aura of effortless career success.</p>
+            
+            <h2>What is Built Inside the Blueprint:</h2>
+            <p>This self-paced, high-impact framework distills advanced clinical adaptation techniques into targeted daily actions you can deploy in under 10 minutes from anywhere.</p>
+            
+            <ul>
+                <li><strong>The Anxiety De-Escalation Track:</strong> Immediate behavioral switches to arrest identity spiral periods.</li>
+                <li><strong>The Expat Core Value Aligner:</strong> Clear psychological worksheets to safely anchor your long-term relationship or individual path goals.</li>
+                <li><strong>Gottman Methodology Primer:</strong> Key foundational micro-lessons for preserving long-distance or high-stress international relational health.</li>
+            </ul>
+
+            <!-- Complete Value Stack Assembly Grid -->
+            <div class="value-stack">
+                <div class="value-stack-title">What You're Securing Right Now:</div>
+                <div class="stack-item"><span>The Complete Resilience Video System</span> <span class="item-value">€97 Value</span></div>
+                <div class="stack-item"><span>Interactive Adaptation Workbooks & Planners</span> <span class="item-value">€37 Value</span></div>
+                <div class="stack-item"><span>Bonus: High-Stress Relational Matrix Tracks</span> <span class="item-value">€47 Value</span></div>
+                <div class="stack-item" style="font-weight: 700;"><span>Total Combined Real-World Value</span> <span class="item-value" style="color: var(--accent)">€181</span></div>
+            </div>
+        </article>
+
+        <!-- Transaction & Order Bump Processing Component -->
+        <aside class="checkout-box">
+            <div class="price-display">
+                <div class="strike-price">Regularly €181.00</div>
+                <div class="actual-price">€27</div>
+                <p style="font-size: 13px; color: var(--text-muted); margin-top: 8px;">One-time investment. Immediate instant digital access.</p>
+            </div>
+
+            <!-- Strategic Order Bump Component to Maximize AOV -->
+            <div class="order-bump">
+                <input type="checkbox" id="bump-checkbox">
+                <div class="order-bump-text">
+                    <label style="cursor: pointer;" for="bump-checkbox">
+                        <span class="order-bump-badge">Add for €9.95</span> 
+                        <strong>Yes, Add The Private Audio Private Feed Upgrade!</strong> Get full portable, high-fidelity MP3 formats of all system lessons to listen on your daily commute or walk.
+                    </label>
+                </div>
+            </div>
+
+            <!-- Transaction Submit Processing Trigger -->
+            <button type="button" class="btn-order">Secure My Blueprint Now →</button>
+
+            <!-- Complete Risk-Reversal Guarantee Elements -->
+            <div class="guarantee-box">
+                <div class="guarantee-badge">🛡️</div>
+                <div class="guarantee-text">
+                    <strong>100% Risk-Free Guarantee.</strong> Look over the toolkit inside the first 30 days. If it doesn't give you immediate actionable clarity on your expat path, let us know and we will issue a full refund immediately.
+                </div>
+            </div>
+        </aside>
+    </main>
+
+</body>
+</html>
