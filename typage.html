@@ -260,12 +260,14 @@
         </section>
 
         <!-- Primary Call Action Block -->
-        <section style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+       <section style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
     <h2>Step 1: Pick a Time for Your Free 15-Min Consultation</h2>
     <p style="color: #555; line-height: 1.5;">Select a convenient date and time to lock in your live consultation call with Haroun. Let's briefly discuss your background and goals.</p>
     
+    <!-- Container for the Integrated Calendar Picker -->
     <div style="margin-top: 25px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 12px; background-color: #f9f9f9; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
         
+        <!-- Step A: Native HTML Input Field -->
         <div style="margin-bottom: 20px;">
             <label for="consultation-time" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">
                 Select Date &amp; Time:
@@ -274,29 +276,30 @@
                    style="padding: 12px; border: 2px solid #ccc; border-radius: 6px; font-size: 16px; width: 100%; box-sizing: border-box; transition: border-color 0.2s;">
         </div>
         
+        <!-- Step B: Action Button -->
         <button type="button" onclick="confirmAppointment()" 
                 style="display: block; background-color: #0073e6; color: white; padding: 14px 24px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%; text-align: center; transition: background-color 0.2s;">
-            Confirm Booking &amp; Connect Calendar →
+            Confirm Booking &amp; Continue →
         </button>
 
     </div>
 
+    <!-- Logic Script -->
     <script>
         function confirmAppointment() {
             const selectedTime = document.getElementById('consultation-time').value;
             
+            // 1. Validation check
             if (!selectedTime) {
                 alert('Please pick a date and time first!');
                 return;
             }
             
-            // Format the output for the user
-            const formattedDate = new Date(selectedTime).toLocaleString();
+            // 2. Data capturing (You can add code here to send 'selectedTime' to your database/email before redirecting)
+            console.log('Booking recorded for:', selectedTime);
             
-            // Log/Process target data (Replace this with your CRM or database submission)
-            console.log('Target timestamp captured:', selectedTime);
-            
-            alert('Success! Your 15-Min Consultation is locked in for: ' + formattedDate);
+            // 3. Instant redirection to your next funnel step
+            window.location.href = "https://dyegoleop-fourtwenty.github.io/funneltest/slo";
         }
     </script>
 </section>
