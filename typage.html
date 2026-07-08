@@ -3,70 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BraveKey Therapy - Secure Your Slot</title>
-    <!-- Add your standard CSS stylesheet link or styles here -->
+    <title>BraveKey Therapy - Secure Your Consultation</title>
+    <!-- Premium Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0f172a;       /* Deep slate/navy for supreme authority */
+            --brand: #0284c7;         /* Clinical therapeutic blue */
+            --brand-light: #e0f2fe;   /* Accent light tint */
+            --success: #10b981;       /* Clean success green */
+            --text-main: #334155;     /* Soft readable body text */
+            --bg-page: #f8fafc;       /* Ultra clean off-white background */
+            --card-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.04), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Clean Minimal Header */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1.25rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.025em;
+        }
+
+        .logo span {
+            color: var(--brand);
+            font-weight: 500;
+        }
+
+        /* Main Funnel Layout */
+        main {
+            max-width: 680px;
+            margin: 3rem auto 5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Success Card Badge */
+        .success-banner {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .check-icon-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #d1fae5;
+            color: var(--success);
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1.25rem;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.75rem;
+        }
+
+        .success-subtitle {
+            font-size: 1.05rem;
+            color: #64748b;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        /* High-Conversion Booking Card Widget */
+        .booking-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .step-tag {
+            background-color: var(--brand-light);
+            color: #0369a1;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            letter-spacing: 0.05em;
+        }
+
+        .booking-instruction {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 2rem;
+        }
+
+        /* Form Controls */
+        .input-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            font-size: 0.87rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Customizing native calendar to look ultra premium */
+        input[type="datetime-local"] {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--primary);
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            outline: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        input[type="datetime-local"]:focus {
+            border-color: var(--brand);
+            background-color: #ffffff;
+            box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.1);
+        }
+
+        /* Action Call to Button */
+        .submit-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            background-color: var(--brand);
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 1.05rem;
+            font-weight: 600;
+            padding: 1.1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+        }
+
+        .submit-btn:hover {
+            background-color: #0274b3;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Micro-copy for trust framework */
+        .trust-microcopy {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.25rem;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        .trust-microcopy svg {
+            fill: #64748b;
+        }
+
+        /* Universal Footer styling */
+        footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        footer p {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Responsive UI tweaks */
+        @media (max-width: 640px) {
+            main { margin: 1.5rem auto 3rem auto; }
+            h1 { font-size: 1.85rem; }
+            .booking-card { padding: 1.5rem; border-radius: 16px; }
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <div>
-            <div>BraveKey<span>Therapy</span></div>
+        <div class="header-container">
+            <div class="logo">BraveKey<span>Therapy</span></div>
         </div>
     </header>
 
     <main>
-        <!-- Success Confirmation Section -->
-        <section>
-            <div>✓</div>
+        <!-- Dynamic Header confirmation -->
+        <section class="success-banner">
+            <div class="check-icon-box">✓</div>
             <h1>You're All Set!</h1>
-            <p>We have received your details. A confirmation has been sent to your email inbox, but let’s secure your actual time block right now.</p>
+            <p class="success-subtitle">We have successfully received your initial registration details. A confirmation email is heading to your inbox, let's complete your booking below.</p>
         </section>
 
-        <!-- Dynamic Step 1 Section with Inline Calendar Picker -->
-        <section style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-            <h2>Step 1: Pick a Time for Your Free 15-Min Consultation</h2>
-            <p>Select a convenient date and time to lock in your live consultation call with Haroun. Let's briefly discuss your background and goals.</p>
+        <!-- Dynamic Step-Based Converter Card -->
+        <section class="booking-card">
+            <h2>
+                <span class="step-tag">Step 1</span> 
+                Secure Your Free 15-Min Consultation
+            </h2>
+            <p class="booking-instruction">
+                Select a convenient date and time to lock in your live consultation call with Haroun. Let's briefly map out your current situation and core personal milestones.
+            </p>
             
-            <!-- Integrated Calendar Picker Container -->
-            <div style="margin-top: 25px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 12px; background-color: #f9f9f9; box-shadow: 0 4px 12px rgba(0,0,0,0.05); max-width: 450px;">
-                
-                <div style="margin-bottom: 20px;">
-                    <label for="consultation-time" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">
-                        Select Date &amp; Time:
-                    </label>
-                    <input type="datetime-local" id="consultation-time" name="consultation-time" 
-                           style="padding: 12px; border: 2px solid #ccc; border-radius: 6px; font-size: 16px; width: 100%; box-sizing: border-box;">
+            <!-- Dynamic Form Wrapper -->
+            <div>
+                <div class="input-group">
+                    <label for="consultation-time">Available Appointment Times:</label>
+                    <input type="datetime-local" id="consultation-time" name="consultation-time" required>
                 </div>
                 
-                <button type="button" onclick="confirmAppointment()" 
-                        style="display: block; background-color: #0073e6; color: white; padding: 14px 24px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%; text-align: center;">
-                    Confirm Booking &amp; Continue →
+                <button type="button" class="submit-btn" onclick="confirmAppointment()">
+                    Confirm Booking &amp; Continue
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.33334 8H12.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 3.33331L12.6667 7.99998L8 12.6666" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </button>
+                
+                <!-- Trust Building Safeguard -->
+                <div class="trust-microcopy">
+                    <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.33333 5.33333V4C9.33333 2.15905 7.84095 0.666664 6 0.666664C4.15905 0.666664 2.66667 2.15905 2.66667 4V5.33333M1.33333 5.33333H10.6667C11.0349 5.33333 11.3333 5.63181 11.3333 6V12.6667C11.3333 13.0349 11.0349 13.3333 10.6667 13.3333H1.33333C0.965144 13.3333 0.666664 13.0349 0.666664 12.6667V6C0.666664 5.63181 0.965144 5.33333 1.33333 5.33333Z" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Secure 256-bit encrypted booking connection. 100% confidential.
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div>
+        <div class="footer-container">
             <p>© BraveKey Therapy &amp; Coaching. Serving international expat networks throughout the region of The Netherlands.</p>
         </div>
     </footer>
 
-    <!-- Logic Script for Verification and Instant Funnel Progression -->
+    <!-- Execution Logic -->
     <script>
+        // Set minimum available selection time to 'now' to prevent past bookings
+        window.addEventListener('DOMContentLoaded', () => {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            
+            const formattedCurrentDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
+            document.getElementById('consultation-time').min = formattedCurrentDateTime;
+        });
+
         function confirmAppointment() {
             const selectedTime = document.getElementById('consultation-time').value;
             
-            // Validation check
+            // 1. Validation check
             if (!selectedTime) {
-                alert('Please pick a date and time first!');
+                alert('Please pick a date and time slot before continuing.');
                 return;
             }
             
-            // Console log tracking (Optional hook for custom events or APIs)
-            console.log('Booking recorded for timestamp:', selectedTime);
+            // 2. Local tracking capture
+            console.log('Valid appointment targeted:', selectedTime);
             
-            // Immediate redirection to your secondary self-paced offer step
+            // 3. Automated hand-off to the next stage of the funnel
             window.location.href = "https://dyegoleop-fourtwenty.github.io/funneltest/slo";
         }
     </script>
