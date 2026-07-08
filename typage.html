@@ -3,336 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | BraveKey Therapy</title>
-    <style>
-        /* Modern Reset & Design Tokens matching the landing page */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #2d4a43;       /* Deep Forest Green */
-            --primary-light: #446e64;
-            --accent: #d4a373;        /* Warm Ochre */
-            --accent-hover: #c39262;
-            --text-main: #2b2d42;     /* Off-black */
-            --text-muted: #6c757d;    /* Soft Gray */
-            --bg-light: #fdfbf7;      /* Warm Canvas Background */
-            --bg-white: #ffffff;
-            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-
-        body {
-            font-family: var(--font-stack);
-            color: var(--text-main);
-            background-color: var(--bg-light);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Header Navigation */
-        .header {
-            padding: 24px 0;
-            background-color: transparent;
-        }
-        
-        .header-wrap {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            color: var(--primary);
-            text-transform: uppercase;
-        }
-
-        .logo span {
-            color: var(--accent);
-            font-weight: 400;
-        }
-
-        /* Thank You Hero Message */
-        .thank-you-hero {
-            text-align: center;
-            padding: 40px 0 60px;
-        }
-
-        .success-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 64px;
-            height: 64px;
-            background-color: #e9f0ee;
-            color: var(--primary);
-            border-radius: 50%;
-            font-size: 28px;
-            margin-bottom: 24px;
-        }
-
-        h1 {
-            font-size: 40px;
-            line-height: 1.2;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 16px;
-            letter-spacing: -1px;
-        }
-
-        .hero-lead {
-            font-size: 18px;
-            color: var(--text-muted);
-            max-width: 650px;
-            margin: 0 auto;
-        }
-
-        /* Call To Action Box (Claim Call) */
-        .claim-call-section {
-            background-color: var(--bg-white);
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 20px 40px rgba(45, 74, 67, 0.06);
-            border: 1px solid #f0ede6;
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 80px;
-        }
-
-        .claim-call-section h2 {
-            font-size: 24px;
-            color: var(--primary);
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-
-        .claim-call-section p {
-            font-size: 15px;
-            color: var(--text-muted);
-            margin-bottom: 24px;
-        }
-
-        /* High Contrast Calendar Button linked to your Google Form */
-        .btn-calendar {
-            display: inline-block;
-            background-color: var(--accent);
-            color: var(--bg-white);
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 700;
-            padding: 16px 36px;
-            border-radius: 8px;
-            transition: background-color 0.2s, transform 0.1s;
-            box-shadow: 0 4px 6px rgba(212, 163, 115, 0.2);
-        }
-
-        .btn-calendar:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-1px);
-        }
-
-        /* Next Steps Offerings Section */
-        .offers-section {
-            background-color: var(--bg-white);
-            padding: 80px 0;
-            border-top: 1px solid #f0ede6;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 50px;
-        }
-
-        .section-header h2 {
-            font-size: 28px;
-            color: var(--primary);
-            margin-bottom: 12px;
-            font-weight: 800;
-        }
-
-        .section-header p {
-            font-size: 15px;
-            color: var(--text-muted);
-        }
-
-        /* Offers Layout Elements */
-        .offers-grid {
-            display: grid;
-            gap: 32px;
-        }
-
-        .offer-card {
-            background: var(--bg-light);
-            border-radius: 12px;
-            border: 1px solid #f0ede6;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .offer-badge {
-            display: inline-block;
-            background-color: #e9f0ee;
-            color: var(--primary);
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 20px;
-        }
-
-        .offer-card h3 {
-            font-size: 22px;
-            color: var(--primary);
-            margin-bottom: 14px;
-            font-weight: 700;
-        }
-
-        .offer-card p {
-            font-size: 15px;
-            color: var(--text-muted);
-            margin-bottom: 24px;
-        }
-
-        .btn-secondary {
-            display: inline-block;
-            text-align: center;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 700;
-            padding: 12px 24px;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--primary);
-            color: var(--bg-white);
-        }
-
-        /* Footer */
-        .footer-seo {
-            padding: 40px 0;
-            font-size: 13px;
-            color: var(--text-muted);
-            text-align: center;
-            border-top: 1px solid #e9e5dc;
-        }
-
-        /* Responsive Layouts */
-        @media (max-width: 768px) {
-            h1 { font-size: 32px; }
-        }
-    </style>
+    <title>BraveKey Therapy - Secure Your Slot</title>
+    <!-- Add your standard CSS stylesheet link or styles here -->
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header class="header">
-        <div class="container header-wrap">
-            <div class="logo">BraveKey<span>Therapy</span></div>
+    <header>
+        <div>
+            <div>BraveKey<span>Therapy</span></div>
         </div>
     </header>
 
-    <!-- Thank You Main Section -->
-    <main class="container">
-        <section class="thank-you-hero">
-            <div class="success-icon">✓</div>
+    <main>
+        <!-- Success Confirmation Section -->
+        <section>
+            <div>✓</div>
             <h1>You're All Set!</h1>
-            <p class="hero-lead">We have received your details. A confirmation has been sent to your email inbox, but let’s secure your actual time block right now.</p>
+            <p>We have received your details. A confirmation has been sent to your email inbox, but let’s secure your actual time block right now.</p>
         </section>
 
-        <!-- Primary Call Action Block -->
-       <section style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-    <h2>Step 1: Pick a Time for Your Free 15-Min Consultation</h2>
-    <p style="color: #555; line-height: 1.5;">Select a convenient date and time to lock in your live consultation call with Haroun. Let's briefly discuss your background and goals.</p>
-    
-    <!-- Container for the Integrated Calendar Picker -->
-    <div style="margin-top: 25px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 12px; background-color: #f9f9f9; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-        
-        <!-- Step A: Native HTML Input Field -->
-        <div style="margin-bottom: 20px;">
-            <label for="consultation-time" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">
-                Select Date &amp; Time:
-            </label>
-            <input type="datetime-local" id="consultation-time" name="consultation-time" 
-                   style="padding: 12px; border: 2px solid #ccc; border-radius: 6px; font-size: 16px; width: 100%; box-sizing: border-box; transition: border-color 0.2s;">
+        <!-- Dynamic Step 1 Section with Inline Calendar Picker -->
+        <section style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            <h2>Step 1: Pick a Time for Your Free 15-Min Consultation</h2>
+            <p>Select a convenient date and time to lock in your live consultation call with Haroun. Let's briefly discuss your background and goals.</p>
+            
+            <!-- Integrated Calendar Picker Container -->
+            <div style="margin-top: 25px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 12px; background-color: #f9f9f9; box-shadow: 0 4px 12px rgba(0,0,0,0.05); max-width: 450px;">
+                
+                <div style="margin-bottom: 20px;">
+                    <label for="consultation-time" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">
+                        Select Date &amp; Time:
+                    </label>
+                    <input type="datetime-local" id="consultation-time" name="consultation-time" 
+                           style="padding: 12px; border: 2px solid #ccc; border-radius: 6px; font-size: 16px; width: 100%; box-sizing: border-box;">
+                </div>
+                
+                <button type="button" onclick="confirmAppointment()" 
+                        style="display: block; background-color: #0073e6; color: white; padding: 14px 24px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%; text-align: center;">
+                    Confirm Booking &amp; Continue →
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>© BraveKey Therapy &amp; Coaching. Serving international expat networks throughout the region of The Netherlands.</p>
         </div>
-        
-        <!-- Step B: Action Button -->
-        <button type="button" onclick="confirmAppointment()" 
-                style="display: block; background-color: #0073e6; color: white; padding: 14px 24px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%; text-align: center; transition: background-color 0.2s;">
-            Confirm Booking &amp; Continue →
-        </button>
+    </footer>
 
-    </div>
-
-    <!-- Logic Script -->
+    <!-- Logic Script for Verification and Instant Funnel Progression -->
     <script>
         function confirmAppointment() {
             const selectedTime = document.getElementById('consultation-time').value;
             
-            // 1. Validation check
+            // Validation check
             if (!selectedTime) {
                 alert('Please pick a date and time first!');
                 return;
             }
             
-            // 2. Data capturing (You can add code here to send 'selectedTime' to your database/email before redirecting)
-            console.log('Booking recorded for:', selectedTime);
+            // Console log tracking (Optional hook for custom events or APIs)
+            console.log('Booking recorded for timestamp:', selectedTime);
             
-            // 3. Instant redirection to your next funnel step
+            // Immediate redirection to your secondary self-paced offer step
             window.location.href = "https://dyegoleop-fourtwenty.github.io/funneltest/slo";
         }
     </script>
-</section>
-    </main>
-
-    <!-- Modified Single-Offer Strategic SLO Transition Section -->
-    <section class="offers-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Explore More Ways to Grow</h2>
-                <p>While preparing for your intake call, fast-track your progress with our specialized self-paced implementation system designed explicitly for expats.</p>
-            </div>
-            
-            <div class="offers-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
-                <!-- Single Focused Offer: Low-Ticket / SLO Blueprint -->
-                <div class="offer-card" style="text-align: center; align-items: center;">
-                    <div>
-                        <span class="offer-badge" style="align-self: center;">Exclusive Digital Training Toolkit</span>
-                        <h3>The Expat Emotional Resilience Blueprint</h3>
-                        <p>Get immediate, life-changing tools to neutralize integration burnout, conquer isolation anxiety, and maximize your lifestyle clarity abroad. Perfect to work through independently while waiting for your clinical session.</p>
-                    </div>
-                    <a href="https://dyegoleop-fourtwenty.github.io/funneltest/slo" class="btn-secondary" style="width: 100%; max-width: 280px; margin-top: 12px;">Get The Blueprint Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Segment -->
-    <footer class="footer-seo">
-        <div class="container">
-            <p>© BraveKey Therapy &amp; Coaching. Serving international expat networks throughout the region of The Netherlands.</p>
-        </div>
-    </footer>
 
 </body>
 </html>
